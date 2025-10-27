@@ -6,7 +6,12 @@
     <meta name="description" content="Projetos sociais da Helpio: oportunidades de voluntariado, impacto e doações.">
     <meta name="theme-color" content="#0A66C2">
     <title>Projetos — Helpio</title>
-    <link rel="icon" href="img/projeto_doação_solidária.jpg">
+    <link rel="icon" href="svg/logo.svg">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/utilities.css">
   </head>
   <body>
     <a class="skip-link" href="#main-content">Pular para conteúdo</a>
@@ -14,17 +19,18 @@
     <header class="site-header" role="banner">
       <div class="wrapper header-inner">
         <a class="brand" href="index.html" aria-label="Página inicial da Helpio">
-          <picture>
-            <!-- usando uma imagem de doação como placeholder da marca -->
-            <img src="img/projeto_doação_solidária.jpg" alt="Marca Helpio (placeholder com imagem de doação solidária)" width="160" height="48">
-          </picture>
+          <!-- usando o logo vetorial SVG -->
+          <img src="svg/logo.svg" alt="Helpio — Logotipo com coração" width="160" height="48">
         </a>
         <nav class="site-nav" aria-label="Navegação principal">
+          <input type="checkbox" id="nav-toggle" class="nav-toggle">
+          <label for="nav-toggle" class="nav-toggle-label"><span class="burger"><span></span></span><span class="sr-only">Menu</span></label>
           <ul class="nav-list">
             <li><a href="index.html">Início</a></li>
             <li><a href="projetos.html" aria-current="page">Projetos</a></li>
             <li><a href="cadastro.html">Cadastro</a></li>
           </ul>
+          <label for="nav-toggle" class="nav-overlay" aria-hidden="true"></label>
         </nav>
       </div>
     </header>

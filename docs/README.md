@@ -7,9 +7,13 @@ root/
 ├── index.html
 ├── projetos.html
 ├── cadastro.html
-├── css/  (pronto para implementação na próxima etapa)
-├── js/   (pronto para implementação na próxima etapa)
-├── img/
+├── css/
+│  ├── tokens.css       // variáveis: cores, tipografia, spacing, breakpoints
+│  ├── base.css         // reset leve, tipografia base, utilidades a11y
+│  ├── layout.css       // grid 12 colunas, containers, seções e responsividade
+│  ├── components.css   // navegação, botões, cards, formulários, alerts/modals, tags
+│  └── utilities.css    // utilitários de espaçamento, display, bg, texto
+├── img/  (imagens em jpg para otimização)
 │  ├── projeto_alimentando_o_bem.jpg
 │  ├── projeto_doação_solidária.jpg
 │  └── projeto_plantando_o_futuro.jpg
@@ -27,6 +31,9 @@ root/
 - Skip link ("Pular para conteúdo") e hierarquia de títulos consistente.
 - Labels conectadas e dicas com `aria-describedby` quando útil.
 - Metas: `charset`, `viewport`, `description`, `lang=pt-BR`, `theme-color`.
+
+### Design System
+- Foram adicionados novos estilos, melhorando a expericiência do usuário e a estética do site.
 
 ### Próximas implementações
 - Estilização responsiva avançada e componentes.
