@@ -36,6 +36,5 @@ root/
 - Foram adicionados novos estilos, melhorando a expericiência do usuário e a estética do site.
 
 ### Próximas implementações
-- Estilização responsiva avançada e componentes.
 - Máscaras (CPF/telefone/CEP) e interações com JS.
 - Otimizações de performance e acessibilidade nível AA completo.
