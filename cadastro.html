@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Cadastro na Helpio: voluntários e doadores. Validação nativa com HTML5.">
+    <meta name="theme-color" content="#0A66C2">
+    <title>Cadastro — Helpio</title>
+    <link rel="icon" href="img/projeto_doação_solidária.jpg">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Pular para conteúdo</a>
+
+    <header class="site-header" role="banner">
+      <div class="wrapper header-inner">
+        <a class="brand" href="index.html" aria-label="Página inicial da Helpio">
+          <picture>
+            <img src="img/projeto_doação_solidária.jpg" alt="Marca Helpio (placeholder com imagem de doação solidária)" width="160" height="48">
+          </picture>
+        </a>
+        <nav class="site-nav" aria-label="Navegação principal">
+          <ul class="nav-list">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="cadastro.html" aria-current="page">Cadastro</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" class="site-main" tabindex="-1">
+      <section class="section" aria-labelledby="cadastro-title">
+        <div class="wrapper form-wrapper">
+          <h1 id="cadastro-title">Cadastro</h1>
+          <p class="lead">Preencha seus dados para se voluntariar ou apoiar projetos. (validação nativa)</p>
+
+          <!-- fieldset/legend foi usado para deixar os grupos mais claros -->
+          <form action="#" method="post">
+            <fieldset>
+              <legend>Dados Pessoais</legend>
+
+              <div class="form-field">
+                <label for="fullName">Nome Completo</label>
+                <input id="fullName" name="fullName" type="text" required minlength="3" placeholder="Seu nome completo">
+              </div>
+
+              <div class="form-field">
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" required placeholder="seuemail@exemplo.com">
+              </div>
+
+              <div class="form-field">
+                <label for="cpf">CPF</label>
+                <small id="cpfHelp" class="help">Digite 11 dígitos, sem pontos ou traços.</small>
+                <input id="cpf" name="cpf" type="text" inputmode="numeric" aria-describedby="cpfHelp"
+                  pattern="^\d{11}$" title="Digite 11 dígitos, sem pontos ou traços" required placeholder="00000000000">
+              </div>
+
+              <div class="form-field">
+                <label for="phone">Telefone</label>
+                <small id="phoneHelp" class="help">Inclua DDD (ex: 1198765-4321).</small>
+                <input id="phone" name="phone" type="tel" inputmode="tel" aria-describedby="phoneHelp"
+                  pattern="^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$" title="Use DDD e número (ex: 1198765-4321)" required placeholder="11987654321">
+              </div>
+
+              <div class="form-field">
+                <label for="birthDate">Data de Nascimento</label>
+                <input id="birthDate" name="birthDate" type="date" required>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Endereço</legend>
+
+              <div class="form-field">
+                <label for="address">Endereço</label>
+                <input id="address" name="address" type="text" required placeholder="Rua, número, complemento">
+              </div>
+
+              <div class="form-field">
+                <label for="cep">CEP</label>
+                <small id="cepHelp" class="help">Formato: 00000-000 ou 00000000.</small>
+                <input id="cep" name="cep" type="text" inputmode="numeric" aria-describedby="cepHelp"
+                  pattern="^\d{5}-?\d{3}$" title="Formato: 00000-000 ou 00000000" required placeholder="00000-000">
+              </div>
+
+              <div class="form-field">
+                <label for="city">Cidade</label>
+                <input id="city" name="city" type="text" required>
+              </div>
+
+              <div class="form-field">
+                <label for="state">Estado</label>
+                <select id="state" name="state" required>
+                  <option value="">Selecione</option>
+                  <option>AC</option><option>AL</option><option>AP</option><option>AM</option>
+                  <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
+                  <option>GO</option><option>MA</option><option>MT</option><option>MS</option>
+                  <option>MG</option><option>PA</option><option>PB</option><option>PR</option>
+                  <option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+                  <option>RS</option><option>RO</option><option>RR</option><option>SC</option>
+                  <option>SP</option><option>SE</option><option>TO</option>
+                </select>
+              </div>
+            </fieldset>
+
+            <div class="form-actions">
+              <button type="submit" class="button primary">Enviar Cadastro</button>
+              <button type="reset" class="button">Limpar</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="wrapper footer-inner">
+        <p>
+          <small>© <span id="year">2025</span> Helpio. Transparência e impacto social.</small>
+        </p>
+        <nav aria-label="Rodapé">
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
+
+

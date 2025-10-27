@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- comentário: logotipo horizontal "Helpio" com apenas o coração + nome. Usa currentColor para facilitar temas -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" role="img" aria-labelledby="title desc" style="color:#0E4BA3">
+  <title id="title">Helpio — heart logo</title>
+  <desc id="desc">Coração estilizado seguido do wordmark Helpio em tipografia sem serifa arredondada.</desc>
+
+  <!-- ícone (lado esquerdo) -->
+  <g transform="translate(14,16)">
+    <path fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"
+          d="M46 76
+             C22 58, 14 44, 20 32
+             C26 20, 40 20, 46 30
+             C52 20, 66 20, 72 32
+             C78 44, 70 58, 46 76z"/>
+  </g>
+
+  <!-- wordmark -->
+  <g fill="currentColor" transform="translate(128,28)">
+    <!-- comentário: texto vivo para manter leve; use fontes do sistema -->
+    <text x="0" y="56" font-size="64" font-weight="700"
+          font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif"
+          letter-spacing="0.5">
+      Helpio
+    </text>
+  </g>
+</svg>
