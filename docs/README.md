@@ -7,12 +7,28 @@ root/
 ├── index.html
 ├── projetos.html
 ├── cadastro.html
+├── js/
+│  ├── main.js
+│  ├── masks.js
+│  ├── modal.js
+│  ├── panel.js
+│  ├── projects.js
+│  ├── router.js
+│  ├── storage.js
+│  ├── theme.js
+│  ├── toast.js
+│  └── validation.js
 ├── css/
-│  ├── tokens.css       // variáveis: cores, tipografia, spacing, breakpoints
-│  ├── base.css         // reset leve, tipografia base, utilidades a11y
-│  ├── layout.css       // grid 12 colunas, containers, seções e responsividade
-│  ├── components.css   // navegação, botões, cards, formulários, alerts/modals, tags
-│  └── utilities.css    // utilitários de espaçamento, display, bg, texto
+├── js/
+│  ├── main.js         // inicialização global (router, modais, máscaras, validação, painel)
+│  ├── masks.js        // máscaras de CPF, CEP e telefone (BR)
+│  ├── modal.js        // sistema de modais com overlay, ESC e focus-trap
+│  ├── panel.js        // modal de cadastros: injeta HTML e atualiza lista do localStorage
+│  ├── projects.js     // filtro de projetos por categoria/tag e estado aria-current
+│  ├── router.js       // roteador simples e bootstrap da página
+│  ├── storage.js      // helpers de localStorage (carregar/salvar com timestamp)
+│  ├── toast.js        // notificações toast simples (auto-close e clique para fechar)
+│  └── validation.js   // validação do cadastro, feedback inline, salva e reseta formulário
 ├── img/  (imagens em jpg para otimização)
 │  ├── projeto_alimentando_o_bem.jpg
 │  ├── projeto_doação_solidária.jpg
