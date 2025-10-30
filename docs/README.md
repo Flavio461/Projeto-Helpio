@@ -7,6 +7,7 @@ root/
 ├── index.html
 ├── projetos.html
 ├── cadastro.html
+├── dist/               // arquivos prontos para produção: minificados e otimizados
 ├── css/
 │  ├── tokens.css       // variáveis: cores, tipografia, spacing, breakpoints
 │  ├── base.css         // reset leve, tipografia base, utilidades a11y
@@ -28,6 +29,8 @@ root/
 │  ├── theme.js        // alternância de tema (dark) e alto contraste + ARIA no menu
 │  ├── toast.js        // notificações toast simples (auto-close e clique para fechar)
 │  └── validation.js   // validação do cadastro, feedback inline, salva e reseta formulário
+├── tools/
+│  ├── minify.ps1      // ferramenta de build do projeto (minificação, otimização e alteração de referências)
 └── docs/
    └── README.md
 ```
