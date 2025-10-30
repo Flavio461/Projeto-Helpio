@@ -17,6 +17,17 @@ root/
 │  ├── projeto_alimentando_o_bem.jpg
 │  ├── projeto_doação_solidária.jpg
 │  └── projeto_plantando_o_futuro.jpg
+├── js/
+│  ├── main.js         // inicialização global (router, modais, máscaras, validação, painel)
+│  ├── masks.js        // máscaras de CPF, CEP e telefone (BR)
+│  ├── modal.js        // sistema de modais com overlay, ESC e focus-trap
+│  ├── panel.js        // modal de cadastros: injeta HTML e atualiza lista do localStorage
+│  ├── projects.js     // filtro de projetos por categoria/tag e estado aria-current
+│  ├── router.js       // roteador simples e bootstrap da página
+│  ├── storage.js      // helpers de localStorage (carregar/salvar com timestamp)
+│  ├── theme.js        // alternância de tema (dark) e alto contraste + ARIA no menu
+│  ├── toast.js        // notificações toast simples (auto-close e clique para fechar)
+│  └── validation.js   // validação do cadastro, feedback inline, salva e reseta formulário
 └── docs/
    └── README.md
 ```
@@ -44,5 +55,30 @@ root/
 ### Design System
 - Foram adicionados novos estilos, melhorando a expericiência do usuário e a estética do site.
 
-### Próximas implementações
-- Otimizações de performance e acessibilidade nível AA completo.
+## Recursos de acessbilidade
+- Estrutura semântica: `header`, `nav`, `main`, `section`, `article`, `aside`, `footer`, `address`.
+- Navegação por teclado: skip link visível ao foco; foco visível em links e botões (`:focus-visible`).
+- Menu mobile acessível: hambúrguer com `aria-controls` e `aria-expanded` sincronizados via JS; overlay para fechar com clique fora; ordem de tabulação preservada.
+- Leitores de tela: textos alternativos em imagens; `aria-label` em controles; modal com `role="dialog"` e `aria-modal="true"` + focus trap e `ESC` para fechar.
+- Contraste: tokens garantem níveis elevados; modos Escuro e Alto Contraste via `data-theme="dark"` e `data-contrast="high"`.
+- Formulários: `label` associado; mensagens de erro inline; estados válidos/inválidos com contraste adequado.
+
+## Preferências de Aparência
+- Modo escuro: botão "🌙" alterna `data-theme="dark"` (persistido em localStorage).
+- Alto contraste: botão "⚑" alterna `data-contrast="high"` (persistido em localStorage).
+
+## Build/Minificação (tools/minify.ps1)
+- Local do script: `tools/minify.ps1`
+- Saída: `dist/` (HTML/CSS/JS minificados + cópias de `img/` e `svg/`).
+
+Como usar no Windows PowerShell (raiz do projeto):
+```powershell
+cd "C:\Projects\Projeto Helpio"
+powershell -ExecutionPolicy Bypass -File .\tools\minify.ps1 -SourceDir . -OutDir .\dist
+```
+
+Ou a partir da pasta `tools/` (usa os padrões do script):
+```powershell
+cd "C:\Projects\Projeto Helpio\tools"
+powershell -ExecutionPolicy Bypass -File .\minify.ps1
+```

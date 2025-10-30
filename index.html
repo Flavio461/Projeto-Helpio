@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/utilities.css">
     <script src="js/masks.js"></script>
+    <script src="js/theme.js"></script>
     <script src="js/storage.js"></script>
     <script src="js/toast.js"></script>
     <script src="js/modal.js"></script>
@@ -38,7 +39,17 @@
             <li><a href="index.html" aria-current="page">Início</a></li>
             <li><a href="projetos.html">Projetos</a></li>
             <li><a href="cadastro.html">Cadastro</a></li>
+            <li class="nav-actions">
+              <div class="theme-controls" role="group" aria-label="Preferências de aparência">
+                <button type="button" class="theme-button" data-theme-toggle="dark" aria-pressed="false" aria-label="Ativar modo escuro">🌙</button>
+                <button type="button" class="theme-button" data-contrast-toggle="high" aria-pressed="false" aria-label="Ativar alto contraste">⚑</button>
+              </div>
+            </li>
           </ul>
+          <div class="theme-controls" role="group" aria-label="Preferências de aparência">
+            <button type="button" class="theme-button" data-theme-toggle="dark" aria-pressed="false" aria-label="Ativar modo escuro">🌙</button>
+            <button type="button" class="theme-button" data-contrast-toggle="high" aria-pressed="false" aria-label="Ativar alto contraste">⚑</button>
+          </div>
           <label for="nav-toggle" class="nav-overlay" aria-hidden="true"></label>
         </nav>
       </div>

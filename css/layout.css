@@ -28,7 +28,7 @@
   .col-3  { grid-column: span 3; }
 }
 
-/* ===== HEADER ===== */
+/* ===== HEADER ===== */ 
 .site-header {
   background-color: var(--neutral-900);
   color: white;
@@ -36,7 +36,6 @@
   top: 0;
   z-index: 100;
   box-shadow: var(--shadow-md);
-  /* padding-x para afastar conteúdo sem deslocar o bg */
   padding-left: var(--container-padding);
   padding-right: var(--container-padding);
 }
@@ -58,16 +57,13 @@
   height: 40px;
   width: auto;
   object-fit: contain;
-  /* força cor branca no SVG quando usado no header escuro */
   filter: brightness(0) invert(1);
 }
 
-/* ===== FOOTER ===== */
 .site-footer {
-  background-color: var(--neutral-100);
+  background-color: var(--bg-surface);
   border-top: 1px solid var(--border-color);
   margin-top: auto;
-  /* padding-x para afastar conteúdo sem deslocar o bg */
   padding-left: var(--container-padding);
   padding-right: var(--container-padding);
 }
@@ -90,7 +86,7 @@
 }
 
 .footer-links a {
-  color: var(--neutral-700);
+  color: var(--text-body);
   transition: color var(--transition-fast);
 }
 
@@ -98,14 +94,16 @@
   color: var(--color-primary-600);
 }
 
-/* ===== MAIN CONTENT ===== */
+.site-footer small {
+  color: var(--text-muted);
+}
+
 .site-main {
   min-height: 60vh;
 }
 
-/* Hero section */
 .hero {
-  background: linear-gradient(135deg, var(--neutral-50) 0%, white 100%);
+  background: var(--bg-surface);
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -117,7 +115,6 @@
   margin-bottom: var(--space-32);
 }
 
-/* Grid de 3 colunas para cards */
 .grid-3 {
   display: grid;
   grid-template-columns: 1fr;
@@ -136,7 +133,6 @@
   }
 }
 
-/* Layout de projetos com sidebar */
 .grid-layout {
   display: grid;
   gap: var(--space-32);
@@ -155,7 +151,6 @@
   margin-bottom: var(--space-24);
 }
 
-/* Lista de projetos */
 .project-list {
   display: grid;
   gap: var(--space-32);
@@ -168,15 +163,14 @@
   }
 }
 
-/* Sidebar */
 .sidebar {
   background-color: var(--bg-surface);
   padding: var(--space-24);
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-color);
   position: sticky;
-  top: 96px; /* aumenta para não sobrepor o header */
-  z-index: 2; /* acima do conteúdo da lista de projetos */
+  top: 96px;
+  z-index: 2;
 }
 
 @media (min-width: 1024px) {
@@ -191,7 +185,6 @@
   margin-bottom: var(--space-16);
 }
 
-/* Checklist (para conquistas) */
 .checklist {
   list-style: none;
   padding: 0;
@@ -212,7 +205,6 @@
   font-weight: var(--font-weight-bold);
 }
 
-/* Team list */
 .team {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -233,7 +225,6 @@
   border: 2px solid var(--border-color);
 }
 
-/* CTA section */
 .cta {
   display: flex;
   gap: var(--space-16);
@@ -247,7 +238,6 @@
   border-bottom: 1px solid var(--border-color);
 }
 
-/* Form wrapper */
 .form-wrapper {
   max-width: 720px;
   margin: 0 auto;

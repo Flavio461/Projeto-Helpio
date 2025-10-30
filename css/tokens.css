@@ -28,6 +28,17 @@
   --text-muted: var(--neutral-500);
   --border-color: var(--neutral-200);
 
+  --menu-surface: var(--neutral-900);
+  --menu-border: var(--neutral-700);
+  --nav-link: #ffffff;
+  --nav-link-active-bg: var(--color-primary-700);
+  --nav-link-active-color: #ffffff;
+
+  --chip-bg: var(--neutral-100);
+  --chip-text: var(--neutral-700);
+  --chip-hover-bg: var(--neutral-200);
+  --chip-hover-color: var(--text-body);
+
   --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   --font-weight-normal: 400;
   --font-weight-medium: 500;
@@ -75,4 +86,45 @@
   --transition-slow: 300ms ease-in-out;
 }
 
+/* Modo escuro */
+:root[data-theme="dark"] {
+  --bg-body: #0b1220;
+  --bg-surface: #121a2a;
+  --text-body: #f3f4f6;
+  --text-muted: #cbd5e1;
+  --border-color: #1f2937;
+  --color-primary-600: #60a5fa;
+  --color-primary-700: #3b82f6;
+  --menu-surface: #0b1220;
+  --menu-border: #1f2937;
+  --nav-link: #ffffff;
+  --nav-link-active-bg: var(--color-primary-700);
+  --nav-link-active-color: #ffffff;
 
+  --chip-bg: #1f2937;
+  --chip-text: var(--text-body);
+  --chip-hover-bg: #374151;
+  --chip-hover-color: var(--text-body);
+}
+
+/* Alto contraste (AA/AAA inclinado) */
+:root[data-contrast="high"] {
+  --bg-body: #000000;
+  --bg-surface: #000000;
+  --text-body: #ffffff;
+  --text-muted: #ffffff;
+  --border-color: #ffffff;
+  --color-primary-600: #ffffff;
+  --color-primary-700: #e5e7eb;
+
+  --menu-surface: #000000;
+  --menu-border: #ffffff;
+  --nav-link: #ffffff;
+  --nav-link-active-bg: #ffffff;
+  --nav-link-active-color: #000000;
+
+  --chip-bg: transparent;
+  --chip-text: #ffffff;
+  --chip-hover-bg: #ffffff;
+  --chip-hover-color: #000000;
+}
