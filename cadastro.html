@@ -12,6 +12,15 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/utilities.css">
+    <script src="js/masks.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/toast.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/panel.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/main.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Pular para conteúdo</a>
@@ -40,8 +49,12 @@
           <h1 id="cadastro-title">Cadastro</h1>
           <p class="lead">Preencha seus dados para se voluntariar ou apoiar projetos. (validação nativa)</p>
 
+          <div class="mt-24 mb-32">
+            <button type="button" class="button" data-modal-open="modal-cadastros">Ver cadastros salvos</button>
+          </div>
+
           <!-- fieldset/legend foi usado para deixar os grupos mais claros -->
-          <form action="#" method="post">
+          <form action="#" method="post" data-js="cadastro-form">
             <fieldset>
               <legend>Dados Pessoais</legend>
 
@@ -57,16 +70,16 @@
 
               <div class="form-field">
                 <label for="cpf">CPF</label>
-                <small id="cpfHelp" class="help">Digite 11 dígitos, sem pontos ou traços.</small>
-                <input id="cpf" name="cpf" type="text" inputmode="numeric" aria-describedby="cpfHelp"
-                  pattern="^\d{11}$" title="Digite 11 dígitos, sem pontos ou traços" required placeholder="00000000000">
+                <small id="cpfHelp" class="help">Digite 11 dígitos (pontos e traço são opcionais).</small>
+                <input id="cpf" name="cpf" type="text" inputmode="numeric" aria-describedby="cpfHelp" data-mask="cpf"
+                  pattern="^\d{3}\.?\d{3}\.?\d{3}-?\d{2}$" title="Formato: 000.000.000-00 ou 00000000000" required placeholder="000.000.000-00" maxlength="14">
               </div>
 
               <div class="form-field">
                 <label for="phone">Telefone</label>
                 <small id="phoneHelp" class="help">Inclua DDD (ex: 1198765-4321).</small>
-                <input id="phone" name="phone" type="tel" inputmode="tel" aria-describedby="phoneHelp"
-                  pattern="^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$" title="Use DDD e número (ex: 1198765-4321)" required placeholder="11987654321">
+                <input id="phone" name="phone" type="tel" inputmode="tel" aria-describedby="phoneHelp" data-mask="phone"
+                  pattern="^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$" title="Use DDD e número. Exemplos: (11) 98765-4321 ou 11987654321" required placeholder="(11) 98765-4321" maxlength="15">
               </div>
 
               <div class="form-field">
@@ -86,8 +99,8 @@
               <div class="form-field">
                 <label for="cep">CEP</label>
                 <small id="cepHelp" class="help">Formato: 00000-000 ou 00000000.</small>
-                <input id="cep" name="cep" type="text" inputmode="numeric" aria-describedby="cepHelp"
-                  pattern="^\d{5}-?\d{3}$" title="Formato: 00000-000 ou 00000000" required placeholder="00000-000">
+                <input id="cep" name="cep" type="text" inputmode="numeric" aria-describedby="cepHelp" data-mask="cep"
+                  pattern="^\d{5}-?\d{3}$" title="Formato: 00000-000 ou 00000000" required placeholder="00000-000" maxlength="9">
               </div>
 
               <div class="form-field">

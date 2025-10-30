@@ -26,6 +26,15 @@ root/
 - projetos.html: lista de projetos como `article` + `aside` de categorias.
 - cadastro.html: formulário com `fieldset`/`legend` e inputs HTML5 (nome, e-mail, CPF, telefone, data de nascimento, endereço, CEP, cidade, estado). Só validação nativa (`required`, `type`, `pattern`, `title`). Sem máscaras nesta fase.
 
+### JavaScript (SPA, Modais, Validação e Storage)
+- Estrutura JS:
+  - `js/main.js`: inicialização global.
+  - `js/router.js`: SPA com troca do `<main>` via fetch e atualização de título/aria-current.
+  - `js/modal.js`: modal com overlay, ESC e focus-trap.
+  - `js/validation.js`: validação do cadastro, mensagens inline, modal de sucesso e gravação em localStorage.
+  - `js/masks.js`: máscaras de CPF, CEP e Telefone (BR).
+  - `js/storage.js`: helpers de localStorage.
+
 ### Acessibilidade + SEO
 - Landmarks: `header`, `nav`, `main`, `section`, `article`, `aside`, `footer`, `address`.
 - Skip link ("Pular para conteúdo") e hierarquia de títulos consistente.
@@ -36,6 +45,4 @@ root/
 - Foram adicionados novos estilos, melhorando a expericiência do usuário e a estética do site.
 
 ### Próximas implementações
-- Estilização responsiva avançada e componentes.
-- Máscaras (CPF/telefone/CEP) e interações com JS.
 - Otimizações de performance e acessibilidade nível AA completo.

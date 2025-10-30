@@ -1,8 +1,4 @@
-/* Utilities: classes auxiliares para espaçamento, display, texto e bg
-   Obs: mantive só o essencial, sem poluir */
-
 /* ===== ESPAÇAMENTOS ===== */
-/* Margin top */
 .mt-8  { margin-top: var(--space-8); }
 .mt-16 { margin-top: var(--space-16); }
 .mt-24 { margin-top: var(--space-24); }
@@ -15,6 +11,7 @@
 .mb-24 { margin-bottom: var(--space-24); }
 .mb-32 { margin-bottom: var(--space-32); }
 .mb-48 { margin-bottom: var(--space-48); }
+.mb-64 { margin-bottom: var(--space-64); }
 
 /* Padding */
 .p-8   { padding: var(--space-8); }

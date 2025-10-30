@@ -12,6 +12,15 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/utilities.css">
+    <script src="js/masks.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/toast.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/panel.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/main.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Pular para conteúdo</a>
@@ -45,17 +54,15 @@
 
           <aside class="sidebar" aria-labelledby="categories-title">
             <h2 id="categories-title">Categorias</h2>
-            <!-- filtro por categorias como placeholder (sem lógica implementada) -->
             <ul class="tags">
-              <li><a href="#">Educação</a></li>
+              <li><a href="#">Alimentação</a></li>
               <li><a href="#">Saúde</a></li>
-              <li><a href="#">Meio ambiente</a></li>
-              <li><a href="#">Cidadania</a></li>
+              <li><a href="#">Educação</a></li>
             </ul>
           </aside>
 
           <section class="project-list" aria-label="Lista de projetos">
-            <article class="project" aria-labelledby="proj1-title">
+            <article class="project" aria-labelledby="proj1-title" data-categories="Alimentação">
               <figure>
                 <picture>
                   <img src="img/projeto_alimentando_o_bem.jpg" alt="Distribuição de alimentos para famílias — projeto Alimentando o Bem" width="640" height="360" loading="lazy">
@@ -73,7 +80,7 @@
               </div>
             </article>
 
-            <article class="project" aria-labelledby="proj2-title">
+            <article class="project" aria-labelledby="proj2-title" data-categories="Alimentação, Saúde">
               <figure>
                 <picture>
                   <img src="img/projeto_doação_solidária.jpg" alt="Campanha de doações de itens essenciais — projeto Doação Solidária" width="640" height="360" loading="lazy">
@@ -91,7 +98,7 @@
               </div>
             </article>
 
-            <article class="project" aria-labelledby="proj3-title">
+            <article class="project" aria-labelledby="proj3-title" data-categories="Educação, Saúde">
               <figure>
                 <picture>
                   <img src="img/projeto_plantando_o_futuro.jpg" alt="Mutirão de plantio de mudas — projeto Plantando o Futuro" width="640" height="360" loading="lazy">

@@ -1,6 +1,3 @@
-/* Layout: grid de 12 colunas, estrutura e responsividade
-   Obs: mantive tudo flexível e mobile-first */
-
 /* Grid system de 12 colunas */
 .grid {
   display: grid;

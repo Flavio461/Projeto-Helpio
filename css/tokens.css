@@ -1,21 +1,16 @@
-/* Design tokens — paleta, tipografia, espaçamentos e breakpoints
-   Obs (estudante): deixei tudo em variáveis pra ficar fácil de manter e consistente */
-
 :root {
-  /* Paleta de cores (>= 8 cores entre primárias, secundárias e neutras) */
   --color-primary-700: #084f98;
-  --color-primary-600: #0A66C2; /* Helpio azul */
+  --color-primary-600: #0A66C2;
   --color-primary-500: #2b7bd0;
   --color-primary-400: #60a5fa;
   
-  --color-secondary-600: #f97316; /* laranja para CTAs */
-  --color-accent-600: #7c3aed;    /* roxo para destaques */
-  --color-success-600: #16a34a;   /* verde (sucesso) */
-  --color-warning-600: #d97706;   /* âmbar (alerta) */
-  --color-danger-600: #dc2626;    /* vermelho (erro) */
-  --color-info-600: #0284c7;      /* azul (informação) */
+  --color-secondary-600: #f97316;
+  --color-accent-600: #7c3aed;
+  --color-success-600: #16a34a;  
+  --color-warning-600: #d97706;  
+  --color-danger-600: #dc2626;   
+  --color-info-600: #0284c7;     
 
-  /* Neutros — escala completa pra ter opções */
   --neutral-50:  #f9fafb;
   --neutral-100: #f3f4f6;
   --neutral-200: #e5e7eb;
@@ -27,14 +22,12 @@
   --neutral-800: #1f2937;
   --neutral-900: #111827;
 
-  /* Cores de uso geral */
   --bg-body: #ffffff;
   --bg-surface: var(--neutral-50);
   --text-body: var(--neutral-900);
   --text-muted: var(--neutral-500);
   --border-color: var(--neutral-200);
 
-  /* Tipografia (>= 5 tamanhos) */
   --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   --font-weight-normal: 400;
   --font-weight-medium: 500;
@@ -53,7 +46,6 @@
   --lh-normal: 1.5;
   --lh-relaxed: 1.75;
 
-  /* Espaçamentos modulares */
   --space-4: 0.25rem;  /* 4px */
   --space-8: 0.5rem;   /* 8px */
   --space-12: 0.75rem; /* 12px */
@@ -65,29 +57,22 @@
   --space-48: 3rem;    /* 48px */
   --space-64: 4rem;    /* 64px */
 
-  /* Container e sizing */
   --container-max: 1200px;
   --container-padding: var(--space-16);
   
-  /* Border radius */
   --radius-sm: 4px;
   --radius-md: 6px;
   --radius-lg: 8px;
   --radius-xl: 12px;
   --radius-full: 9999px;
   
-  /* Sombras */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  
-  /* Transições */
+
   --transition-fast: 150ms ease-in-out;
   --transition-base: 200ms ease-in-out;
   --transition-slow: 300ms ease-in-out;
-
-  /* Breakpoints (>= 5) comentados para referência */
-  /* xs: 360px, sm: 480px, md: 768px, lg: 1024px, xl: 1280px */
 }
 
 

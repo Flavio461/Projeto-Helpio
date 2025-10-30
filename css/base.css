@@ -12,6 +12,10 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Garante que o atributo [hidden] sempre esconda o elemento,
+   mesmo quando regras de display de componentes forem aplicadas */
+[hidden] { display: none !important; }
+
 body {
   margin: 0;
   font-family: var(--font-sans);
@@ -42,7 +46,6 @@ p {
   margin: 0 0 var(--space-16) 0;
 }
 
-/* Listas — remoção de estilo das listas */
 ul, ol {
   list-style: none;
   margin: 0;
